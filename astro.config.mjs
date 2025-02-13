@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import path from "path";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -24,5 +25,12 @@ export default defineConfig({
   outDir: "dist",
   devToolbar: {
     enabled: false,
+  },
+  vite: {
+    resolve: {
+      alias: {
+        "~": path.resolve(__dirname, "./src"), // Ensure this alias is correct
+      },
+    },
   },
 });
