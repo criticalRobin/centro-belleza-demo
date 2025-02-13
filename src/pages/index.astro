@@ -2,7 +2,7 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
-import { Picture, Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
@@ -12,14 +12,13 @@ import WideImage from "~/components/WideImage.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
 
 // Images
-import hero from "~/assets/images/gallery/hero.png";
-import banner from "~/assets/images/gallery/banner.jpg";
-import CortesPeinados from "~/assets/images/gallery/CortesPeinados.PNG";
-import TratamientosFaciales from "~/assets/images/gallery/TratamientosFaciales.PNG";
-import ManicuraPedicura from "~/assets/images/gallery/ManicuraPedicura.PNG";
-import reviewAuthors from "~/assets/images/review-authors.png";
-import Dessert from "~/assets/images/dessert.png";
-import Mussels from "~/assets/images/mussels2.png";
+// import hero from '../assets/images/gallery/hero.png';
+// import hero from "~/assets/images/gallery/hero.png";
+// import banner from "../assets/images/gallery/banner.jpg";
+// import CortesPeinados from "../assets/images/gallery/CortesPeinados.png";
+// import TratamientosFaciales from "../assets/images/gallery/TratamientosFaciales.png";
+// import ManicuraPedicura from "../assets/images/gallery/ManicuraPedicura.png";
+// import reviewAuthors from "../assets/images/review-authors.png";
 ---
 
 <Layout title="Home" pageTitle="Home" description="Welcome to our restaurant!">
@@ -46,7 +45,7 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="hero-content-right">
         <Picture
           class:list={"mx-auto"}
-          src={hero}
+          src="../assets/images/gallery/hero.png"
           height={520}
           formats={["avif", "webp"]}
           alt="A description of my image."
@@ -58,7 +57,7 @@ import Mussels from "~/assets/images/mussels2.png";
   </Section>
 
   <WideImage
-    image={banner}
+    image="../assets/images/gallery/banner.jpg"
     alt="Just an image"
     class:list={"aspect-video lg:aspect-[16/6]"}
   />
@@ -81,7 +80,7 @@ import Mussels from "~/assets/images/mussels2.png";
         <div class="flex flex-col items-center prose text-center">
           <Picture
             class:list={"not-prose w-full h-auto"}
-            src={CortesPeinados}
+            src="../assets/images/gallery/CortesPeinados.png"
             formats={["avif", "webp"]}
             alt="Cortes y peinados modernos."
           />
@@ -98,7 +97,7 @@ import Mussels from "~/assets/images/mussels2.png";
         <div class="flex flex-col items-center prose text-center">
           <Picture
             class:list={"not-prose w-full h-auto"}
-            src={TratamientosFaciales}
+            src="../assets/images/gallery/TratamientosFaciales.png"
             formats={["avif", "webp"]}
             alt="Tratamientos faciales rejuvenecedores."
           />
@@ -117,7 +116,7 @@ import Mussels from "~/assets/images/mussels2.png";
         <div class="flex flex-col items-center prose text-center">
           <Picture
             class:list={"not-prose w-full h-auto"}
-            src={ManicuraPedicura}
+            src="../assets/images/gallery/ManicuraPedicura.png"
             formats={["avif", "webp"]}
             alt="Manicura y pedicura de lujo."
           />
@@ -173,7 +172,7 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="hero-content-right">
         <Picture
           class:list={"mx-auto"}
-          src={TratamientosFaciales}
+          src="../assets/images/gallery/limpieza-facial.png"
           height={520}
           formats={["avif", "webp"]}
           alt="A description of my image."
@@ -208,7 +207,7 @@ import Mussels from "~/assets/images/mussels2.png";
 
         <div slot="hero-content-right">
           <Picture
-            src={reviewAuthors}
+            src="../assets/images/review-authors.png"
             alt="Review authors"
             class="w-full h-auto"
           />
@@ -269,7 +268,7 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="hero-content-right">
         <Picture
           class:list={"mx-auto"}
-          src={ManicuraPedicura}
+          src="../assets/images/gallery/ManicuraPedicura.png"
           height={500}
           formats={["avif", "webp"]}
           alt="A description of my image."
