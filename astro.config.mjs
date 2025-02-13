@@ -29,7 +29,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "./src"), // Ensure this alias is correct
+        "~": path.resolve(new URL(".", import.meta.url).pathname, "./src"), // Ensure this alias is correct
       },
     },
   },
