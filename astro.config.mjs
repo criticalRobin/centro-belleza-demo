@@ -28,6 +28,5 @@ export default defineConfig({
   },
   experimental: {
     svg: true,
-    assets: true,
   },
 });
