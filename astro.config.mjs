@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import * as path from "path";
-
 import tailwind from "@astrojs/tailwind";
 
 import alpinejs from "@astrojs/alpinejs";
@@ -15,6 +13,7 @@ import playformInline from "@playform/inline";
 export default defineConfig({
   site: "https://astropie.netlify.app",
   base: "/",
+  // trailingSlash: 'always',
   integrations: [
     tailwind(),
     alpinejs(),
@@ -24,15 +23,8 @@ export default defineConfig({
     }),
   ],
   output: "static", // Remove this line or change it to "server" if needed
-  outDir: "dist", // Add this line to specify the output directory
+  outDir: "dist",
   devToolbar: {
     enabled: false,
-  },
-  vite: {
-    resolve: {
-      alias: {
-        "~": path.resolve(__dirname, "./src"),
-      },
-    },
   },
 });
